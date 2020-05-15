@@ -1,0 +1,61 @@
+@import "grid", "font", "colors", "boxes", "footer"
+
+body
+    // setting basic colors
+    background-color: $background
+    color: $foreground !important
+
+// overriding bootstrap links
+a
+    color: $link
+    &.nav-link
+        color: $link
+
+// makes text darker when on a light background
+.bg-light
+    background-color: $foreground
+
+.code-icons
+    // display them in a row, extend to max width
+    display: flex
+
+    // visual separation
+    border-top: 1px solid $lighter-2
+
+    padding: 10px
+
+    *
+        margin: 0 10px
+
+        // code icons should be larger
+        font-size: 2rem
+
+        // color change on hover
+        color: $light-white
+        &:hover
+            color: $white
+
+// grid with an icon and text
+.text-grid
+    text-align: left
+    display: inline-block
+    div[role=row]
+        // *vertical* alignment
+        align-items: center
+
+        // display in a row, also uses min width possible
+        display: inline-block
+        font-size: 1.5rem
+
+        // spacing between
+        i, span
+            margin: 0px 10px
+        
+        i
+            color: $dark-gray
+
+        margin: 10px
+
+// removes bullets from a <ul> tag
+.no-bullets
+    list-style-type: none

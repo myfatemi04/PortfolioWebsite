@@ -1,0 +1,39 @@
+@import "colors"
+    
+.drop-shadow
+    box-shadow: 0.1cm 0.1cm $darker-1
+
+.curved-border
+    border-radius: 0.25rem
+
+.border-shadow
+    @extend .drop-shadow, .curved-border
+
+// .button:
+// drop-shadow
+// swap fg and bg colors
+// drop text decoration
+.button
+    @extend .border-shadow
+    padding: 0.5rem
+
+    text-decoration: none
+    background-color: $light-white
+    color: $background
+
+    &:hover
+        text-decoration: none
+        background-color: adjust-color($light-white, $lightness: 25)
+
+.buttons
+    display: flex
+    flex-direction: row
+
+    margin: 0.5cm auto
+    justify-content: center
+
+    a
+        @extend .button
+
+        margin-left: 0.25rem
+        margin-right: 0.25rem

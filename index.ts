@@ -9,8 +9,13 @@ app.set('view engine', 'hbs');
 app.set('views', './views');
 
 // Partials so we can reuse code
-hbs.registerPartial("css", fs.readFileSync("views/css.hbs", "utf-8"));
-hbs.registerPartial("nav", fs.readFileSync("views/nav.hbs", "utf-8"));
+function makePartial(name: string) {
+    hbs.registerPartial(name, fs.readFileSync("views/" + name + ".hbs", "utf-8"));
+}
+
+makePartial("css");
+makePartial("nav");
+makePartial("footer");
 
 app.use(Express.static('./static'));
 

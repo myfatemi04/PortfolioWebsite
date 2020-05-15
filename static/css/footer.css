@@ -1,0 +1,13 @@
+.footer {
+    /* Stick to the bottom of the screen */
+    position: absolute;
+    bottom: 0;
+    
+    /* Stretch across screen, 60px high, text 10px from edges */
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+
+    /* For redundancy, just in case */
+    text-align: left;
+}

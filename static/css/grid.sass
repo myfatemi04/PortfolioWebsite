@@ -1,0 +1,34 @@
+@import "colors", "boxes"
+
+$grid-width: 300px
+$grid-height: 500px
+
+// grid wrapping is based off of Fireship.io
+.project-grid-container
+    display: grid
+
+    // center the squares in the grid
+    text-align: center
+
+    // gap between squares
+    gap: 1rem
+
+    // automatically make columns fit to the browser
+    grid-template-columns: repeat(auto-fit, minmax($grid-width, 1fr))
+
+    // size of implicitly generated rows
+    grid-auto-rows: $grid-height
+
+.project-grid-square
+    @extend .drop-shadow, .curved-border
+
+    // reset the centering from .project-grid-container
+    text-align: left
+    background-color: $lighter-1
+
+    // pad the content
+    padding: 0.5rem
+
+    // make it lighter on hover
+    &:hover
+        background-color: $lighter-2
