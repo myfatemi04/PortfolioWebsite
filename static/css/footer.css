@@ -1,3 +1,12 @@
+body {
+    margin-bottom: 60px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 .footer {
     /* Stick to the bottom of the screen */
     position: absolute;
@@ -5,6 +14,7 @@
     
     /* Stretch across screen, 60px high, text 10px from edges */
     width: 100%;
+    line-height: 60px;
     height: 60px;
     padding: 10px;
 

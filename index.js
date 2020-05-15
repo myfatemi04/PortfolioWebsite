@@ -8,15 +8,21 @@ var app = Express();
 app.set('view engine', 'hbs');
 app.set('views', './views');
 // Partials so we can reuse code
-hbs.registerPartial("css", fs.readFileSync("views/css.hbs", "utf-8"));
-hbs.registerPartial("nav", fs.readFileSync("views/nav.hbs", "utf-8"));
+function makePartials(names) {
+    names.forEach(function (name) { return hbs.registerPartial(name, fs.readFileSync("views/" + name + ".hbs", "utf-8")); });
+}
+makePartials(['css', 'nav', 'footer']);
 app.use(Express.static('./static'));
 app.get("/", function (req, res) {
     res.render("index");
 });
-app.get("/contact", function (req, res) {
-    res.render("contact");
-});
+// Saves typing
+function route(files) {
+    files.forEach(function (file) {
+        app.get("/" + file, function (req, res) { return res.render(file); });
+    });
+}
+route(['contact', 'projects/2020/coronavision']);
 var port = 5000;
 console.log("Listening on", port);
 app.listen(port);

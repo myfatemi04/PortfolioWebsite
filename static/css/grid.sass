@@ -1,7 +1,7 @@
 @import "colors", "boxes"
 
 $grid-width: 300px
-$grid-height: 500px
+$grid-height: 300px
 
 // grid wrapping is based off of Fireship.io
 .project-grid-container
@@ -29,6 +29,35 @@ $grid-height: 500px
     // pad the content
     padding: 0.5rem
 
+    // scrollable
+    overflow-y: auto
+
     // make it lighter on hover
     &:hover
         background-color: $lighter-2
+    
+    img
+        object-fit: contain
+        width: 100%
+        height: auto
+
+// grid with an icon and text
+.text-grid
+    text-align: left
+    display: inline-block
+    div[role=row]
+        // *vertical* alignment
+        align-items: center
+
+        // display in a row, also uses min width possible
+        display: inline-block
+        font-size: 1.5rem
+
+        // spacing between
+        i, span
+            margin: 0px 10px
+        
+        i
+            color: $dark-gray
+
+        margin: 10px

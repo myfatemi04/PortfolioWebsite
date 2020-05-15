@@ -1,4 +1,4 @@
-@import "grid", "font", "colors", "boxes", "footer"
+@import "colors"
 
 body
     // setting basic colors
@@ -7,9 +7,13 @@ body
 
 // overriding bootstrap links
 a
-    color: $link
+    color: $light-white
+    text-decoration: underline
+    &:hover
+        color: $link
     &.nav-link
         color: $link
+        text-decoration: none
 
 // makes text darker when on a light background
 .bg-light
@@ -18,6 +22,7 @@ a
 .code-icons
     // display them in a row, extend to max width
     display: flex
+    justify-content: center
 
     // visual separation
     border-top: 1px solid $lighter-2
@@ -34,27 +39,6 @@ a
         color: $light-white
         &:hover
             color: $white
-
-// grid with an icon and text
-.text-grid
-    text-align: left
-    display: inline-block
-    div[role=row]
-        // *vertical* alignment
-        align-items: center
-
-        // display in a row, also uses min width possible
-        display: inline-block
-        font-size: 1.5rem
-
-        // spacing between
-        i, span
-            margin: 0px 10px
-        
-        i
-            color: $dark-gray
-
-        margin: 10px
 
 // removes bullets from a <ul> tag
 .no-bullets

@@ -1,0 +1,36 @@
+// We are assuming that you have three columns of images by default, and each column is roughly 300 px
+$two-columns: 600px
+$three-columns: 900px
+
+.gallery
+    // display the columns horizontally
+    display: flex
+
+    // cause the columns to stack
+    flex-wrap: wrap
+
+// One column
+@media (max-width: $two-columns)
+    .gallery-column
+        flex: 100%
+
+// Two columns
+@media (min-width: $two-columns) and (max-width: $three-columns)
+    .gallery-column
+        flex: 50%
+
+// Three columns
+@media (min-width: $three-columns)
+    .gallery-column
+        flex: 33%
+
+.gallery-column
+    display: flex
+    flex-direction: column
+    margin: 10px
+
+    img
+        // 100% - margin of column
+        width: calc(100% - 10px)
+        height: auto
+        margin: 10px 0px

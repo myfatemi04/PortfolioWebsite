@@ -9,13 +9,13 @@ app.set('view engine', 'hbs');
 app.set('views', './views');
 
 // Partials so we can reuse code
-function makePartial(name: string) {
-    hbs.registerPartial(name, fs.readFileSync("views/" + name + ".hbs", "utf-8"));
+function makePartials(names: string[]) {
+    names.forEach(
+        name => hbs.registerPartial(name, fs.readFileSync("views/" + name + ".hbs", "utf-8"))
+    );
 }
 
-makePartial("css");
-makePartial("nav");
-makePartial("footer");
+makePartials(['css', 'nav', 'footer']);
 
 app.use(Express.static('./static'));
 
@@ -23,9 +23,13 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
-app.get("/contact", (req, res) => {
-    res.render("contact");
-});
+// Saves typing
+function route(files: string[]) {
+    files.forEach(file => {
+        app.get("/" + file, (req, res) => res.render(file));
+    });
+}
+route(['contact', 'projects/2020/coronavision']);
 
 let port = 5000;
 console.log("Listening on", port);
