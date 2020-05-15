@@ -1,6 +1,7 @@
 // We are assuming that you have three columns of images by default, and each column is roughly 300 px
-$two-columns: 600px
-$three-columns: 900px
+$two-columns: 992px
+$three-columns: 1200px
+$padding-column: 10px
 
 .gallery
     // display the columns horizontally
@@ -12,25 +13,27 @@ $three-columns: 900px
 // One column
 @media (max-width: $two-columns)
     .gallery-column
-        flex: 100%
+        width: 99%
 
 // Two columns
 @media (min-width: $two-columns) and (max-width: $three-columns)
     .gallery-column
-        flex: 50%
+        width: 49.5%
 
 // Three columns
 @media (min-width: $three-columns)
     .gallery-column
-        flex: 33%
+        width: 33%
 
 .gallery-column
     display: flex
     flex-direction: column
-    margin: 10px
+    padding: $padding-column
+    box-sizing: border-box
 
     img
-        // 100% - margin of column
-        width: calc(100% - 10px)
+        // so the image is 100% the width of the container
+        box-sizing: border-box
+        width: 100%
         height: auto
         margin: 10px 0px
