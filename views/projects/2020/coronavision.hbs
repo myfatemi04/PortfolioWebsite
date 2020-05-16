@@ -49,14 +49,7 @@
             </p>
         </div>
 
-        <script type="text/javascript">
-            $(".gallery img").click(
-                function() {
-                    let tab = window.open(this.getAttribute("src"), "_blank");
-                    tab.focus();
-                }
-            );
-        </script>
+        <script src="/js/clickable-images.js"></script>
         {{> footer}}
     </body>
 </html>
