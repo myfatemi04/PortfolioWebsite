@@ -7,9 +7,11 @@ a {
   color: #f7f7f7;
   text-decoration: underline;
 }
+
 a:hover {
   color: #2667ff;
 }
+
 a.nav-link {
   color: #2667ff;
   text-decoration: none;
@@ -20,16 +22,22 @@ a.nav-link {
 }
 
 .code-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   padding: 10px;
 }
+
 .code-icons * {
   margin: 0 10px;
   font-size: 2rem;
   color: #f7f7f7;
 }
+
 .code-icons *:hover {
   color: #ffffff;
 }
@@ -37,5 +45,4 @@ a.nav-link {
 .no-bullets {
   list-style-type: none;
 }
-
 /*# sourceMappingURL=main.css.map */

@@ -1,8 +1,9 @@
-.drop-shadow, .project-grid-square, .border-shadow, .white-box, .button, .buttons a {
-  box-shadow: 0.1cm 0.1cm rgba(0, 0, 0, 0.2);
+.drop-shadow, .border-shadow, .button, .buttons a, .white-box, .project-grid-square {
+  -webkit-box-shadow: 0.1cm 0.1cm rgba(0, 0, 0, 0.2);
+          box-shadow: 0.1cm 0.1cm rgba(0, 0, 0, 0.2);
 }
 
-.curved-border, .project-grid-square, .border-shadow, .white-box, .button, .buttons a {
+.curved-border, .border-shadow, .button, .buttons a, .white-box, .project-grid-square {
   border-radius: 0.25rem;
 }
 
@@ -12,17 +13,26 @@
   background-color: #f7f7f7;
   color: #2667ff;
 }
+
 .button:hover, .buttons a:hover {
   text-decoration: none;
   background-color: white;
 }
 
 .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: 0.5cm auto;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .buttons a {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -34,10 +44,12 @@
 }
 
 .project-grid-container {
+  display: -ms-grid;
   display: grid;
   text-align: center;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: 300px;
 }
 
@@ -47,11 +59,14 @@
   padding: 0.5rem;
   overflow-y: auto;
 }
+
 .project-grid-square:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
 .project-grid-square img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
   height: auto;
 }
@@ -60,17 +75,21 @@
   text-align: left;
   display: inline-block;
 }
+
 .text-grid div[role=row] {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: inline-block;
   font-size: 1.5rem;
   margin: 10px;
 }
+
 .text-grid div[role=row] i, .text-grid div[role=row] span {
   margin: 0px 10px;
 }
+
 .text-grid div[role=row] i {
   color: #343a40;
 }
-
 /*# sourceMappingURL=grid.css.map */

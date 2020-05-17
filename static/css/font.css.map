@@ -1,1 +1,9 @@
-{"version":3,"sourceRoot":"","sources":["font.sass"],"names":[],"mappings":"AAAA;EACI;;;AAEJ;EACI","file":"font.css"}
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACR,SAAS,EAAE,IAAI;CAAG;;AAEtB,AAAA,SAAS,CAAC;EACN,SAAS,EAAE,IAAI;CAAG",
+    "sources": [
+        "font.sass"
+    ],
+    "names": [],
+    "file": "font.css"
+}
