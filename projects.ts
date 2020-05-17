@@ -34,17 +34,21 @@ let coronavision: Project = {
         [
             { file: "/img/projects/2020/coronavision/MainPage-Stats.png", alt: "Live stats"},
             { file: "/img/projects/2020/coronavision/MainPage-Table.png", alt: "Live data table"},
-            { file: "/img/projects/2020/coronavision/Maps-WorldMap.png", alt: "Choropleth map of cases"}],
+            { file: "/img/projects/2020/coronavision/Maps-WorldMap.png", alt: "Choropleth map of cases"}
+        ],
         [
             { file: "/img/projects/2020/coronavision/News.png", alt: "News feed"},
             { file: "/img/projects/2020/coronavision/Charts-DailyTotal.png", alt: "Chart showing the number of new cases per day"},
-            { file: "/img/projects/2020/coronavision/Maps-Heatmap.png", alt: "Heatmap of cases"}],
+            { file: "/img/projects/2020/coronavision/Maps-Heatmap.png", alt: "Heatmap of cases"}
+        ],
         [
             { file: "/img/projects/2020/coronavision/Charts-Recoveries.png", alt: "Chart showing the number of recoveries per day"},
-            { file: "/img/projects/2020/coronavision/HowToHelp.png", alt: "Page showing ways to help"}],
+            { file: "/img/projects/2020/coronavision/HowToHelp.png", alt: "Page showing ways to help"}
+        ],
         [
             { file: "/img/projects/2020/coronavision/Maps-CountyLevel.png", alt: "Choropleth map at the county level"},
-            { file: "/img/projects/2020/coronavision/Maps-ChooseFeature.png", alt: "Maps were very flexible"}],
+            { file: "/img/projects/2020/coronavision/Maps-ChooseFeature.png", alt: "Maps were very flexible"}
+        ],
     ],
     html: renderMDFile("markdown/coronavision.md"),
     descHtml: renderMDFile("markdown/coronavision-desc.md")
@@ -56,14 +60,10 @@ let eyeos: Project = {
     authors: "Michael Fatemi, Autin Mitra, and Suhas Nandiraju",
     githubLink: "https://www.github.com/myfatemi04/EyeOS",
     images: [
-        [
-            { file: "/img/projects/2020/eyeos/Camera.png", alt: "Webcam view, showing positions of pupils"},],
-        [
-            { file: "/img/projects/2020/eyeos/App-MainPage.png", alt: "UI Main Page (design by Autin Mitra)"},],
-        [
-            { file: "/img/projects/2020/eyeos/App-Settings.png", alt: "UI Settings (design by Autin Mitra)"},],
-        [
-            { file: "/img/projects/2020/eyeos/App-AppLauncher.png", alt: "UI App Launcher (design by Autin Mitra)"},],
+        [{ file: "/img/projects/2020/eyeos/Camera.png", alt: "Webcam view, showing positions of pupils"},],
+        [{ file: "/img/projects/2020/eyeos/App-MainPage.png", alt: "UI Main Page (UI by Autin Mitra)"},],
+        [{ file: "/img/projects/2020/eyeos/App-Settings.png", alt: "UI Settings (UI by Autin Mitra)"},],
+        [{ file: "/img/projects/2020/eyeos/App-AppLauncher.png", alt: "UI App Launcher (UI by Autin Mitra)"},],
     ],
     html: renderMDFile("markdown/eyeos.md"),
     descHtml: renderMDFile("markdown/eyeos-desc.md"),
