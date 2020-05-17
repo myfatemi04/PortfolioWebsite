@@ -1,6 +1,7 @@
 import * as Express from "express";
 import * as hbs from "hbs";
 import * as fs from "fs";
+import * as projects from "./projects";
 
 const app = Express();
 
@@ -15,11 +16,11 @@ function makePartials(names: string[]) {
     );
 }
 
-makePartials(['css', 'nav', 'footer']);
+makePartials(['css', 'nav', 'footer', 'project-list']);
 
 app.use("/", Express.static('./static'));
 app.get("/", (req, res) => {
-    res.render("index");
+    res.render("index", { projects: projects.all });
 });
 
 // Saves typing
@@ -28,7 +29,13 @@ function route(files: string[]) {
         app.get("/" + file, (req, res) => res.render(file));
     });
 }
-route(['contact', 'projects/2020/coronavision']);
+route(['contact']);
+
+app.use("/projects", (req, res) => {
+    let projectID = req.path.slice(1); //.slice(1) to get rid of the slash
+    let projectInfo = projects.get(projectID);
+    res.render("project", projectInfo);
+});
 
 // // Allows us to load previous projects
 // // import * as coronavision from "./projects/2020/coronavision/webapp";

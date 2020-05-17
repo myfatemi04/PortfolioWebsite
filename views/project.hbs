@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{name}}</title>
+        
+        {{> css}}
+    </head>
+    <body>
+        {{> nav}}
+        <h1 class="text-center display-1">{{name}}</h1>
+
+        <div class="code-icons">
+            {{#if githubLink}}
+                <a target="_blank" href="{{githubLink}}">
+                    <i class="fa fa-github"></i>Github
+                </a>
+            {{/if}}
+            {{#if liveLink}}
+                <a target="_blank" href="{{liveLink}}">
+                    <i class="fas fa-eye"></i>Live
+                </a>
+            {{/if}}
+        </div>
+
+        <div class="container bg-light white-box">
+            {{!-- guaranteed safe html, so we do {{{}}} --}}
+            {{{ html }}}
+            {{#if images}}
+                <div>
+                    <h3 class="text-center">Image Gallery</h3>
+                    <div class="gallery">
+                        {{#images}}
+                            <div class="gallery-column">
+                                {{#each this}}
+                                    <img src="{{this.file}}" alt="{{this.alt}}">
+                                {{/each}}
+                            </div>
+                        {{/images}}
+                    </div>
+                </div>
+            {{/if}}
+        </div>
+
+        <div class="imageWindow">
+            <h3 id="imageWindowAlt"></h3>
+            <a id="imageWindowHide" href="javascript:hideImageWindow()" class="med-font">
+                <i class="far fa-window-close"></i>
+            </a>
+            <img>
+        </div>
+
+        <script src="/js/clickable-images.js"></script>
+        {{> footer}}
+    </body>
+</html>

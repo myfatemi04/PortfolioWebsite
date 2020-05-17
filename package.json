@@ -18,6 +18,7 @@
     "countryjs": "^1.8.0",
     "express": "^4.17.1",
     "hbs": "^4.1.1",
+    "markdown-it": "^10.0.0",
     "mysql": "^2.18.1",
     "newsapi": "^2.4.0",
     "sqlstring": "^2.3.2",

@@ -3,6 +3,7 @@ exports.__esModule = true;
 var Express = require("express");
 var hbs = require("hbs");
 var fs = require("fs");
+var projects = require("./projects");
 var app = Express();
 // We are using Handlebars
 app.set('view engine', 'hbs');
@@ -11,10 +12,10 @@ app.set('views', './views');
 function makePartials(names) {
     names.forEach(function (name) { return hbs.registerPartial(name, fs.readFileSync("views/" + name + ".hbs", "utf-8")); });
 }
-makePartials(['css', 'nav', 'footer']);
+makePartials(['css', 'nav', 'footer', 'project-list']);
 app.use("/", Express.static('./static'));
 app.get("/", function (req, res) {
-    res.render("index");
+    res.render("index", { projects: projects.all });
 });
 // Saves typing
 function route(files) {
@@ -22,7 +23,12 @@ function route(files) {
         app.get("/" + file, function (req, res) { return res.render(file); });
     });
 }
-route(['contact', 'projects/2020/coronavision']);
+route(['contact']);
+app.use("/projects", function (req, res) {
+    var projectID = req.path.slice(1); //.slice(1) to get rid of the slash
+    var projectInfo = projects.get(projectID);
+    res.render("project", projectInfo);
+});
 // // Allows us to load previous projects
 // // import * as coronavision from "./projects/2020/coronavision/webapp";
 // // coronavision.registerPartials();

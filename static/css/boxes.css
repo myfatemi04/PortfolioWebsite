@@ -1,9 +1,8 @@
-.drop-shadow, .border-shadow, .button, .buttons a, .white-box {
-  -webkit-box-shadow: 0.1cm 0.1cm rgba(0, 0, 0, 0.2);
-          box-shadow: 0.1cm 0.1cm rgba(0, 0, 0, 0.2);
+.drop-shadow, .border-shadow, .white-box, .button, .buttons a {
+  box-shadow: 0.1cm 0.1cm rgba(0, 0, 0, 0.2);
 }
 
-.curved-border, .border-shadow, .button, .buttons a, .white-box {
+.curved-border, .border-shadow, .white-box, .button, .buttons a {
   border-radius: 0.25rem;
 }
 
@@ -13,26 +12,17 @@
   background-color: #f7f7f7;
   color: #2667ff;
 }
-
 .button:hover, .buttons a:hover {
   text-decoration: none;
   background-color: white;
 }
 
 .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   margin: 0.5cm auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .buttons a {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -42,4 +32,5 @@
   color: #343a40;
   padding: 10px;
 }
+
 /*# sourceMappingURL=boxes.css.map */

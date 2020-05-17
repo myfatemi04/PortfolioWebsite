@@ -1,0 +1,20 @@
+<div class="project-grid-container container">
+    {{#projects}}
+        <div class="project-grid-square">
+            <h2>{{name}}</h2>
+            {{{descHtml}}}
+            <div class="code-icons">
+                {{#if githubLink}}
+                    <a target="_blank" href="{{githubLink}}">
+                        <i class="fa fa-github"></i>Github
+                    </a>
+                {{/if}}
+                {{#if liveLink}}
+                    <a target="_blank" href="{{liveLink}}">
+                        <i class="fas fa-eye"></i>Live
+                    </a>
+                {{/if}}
+            </div>
+        </div>
+    {{/projects}}
+</div>

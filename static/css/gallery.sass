@@ -40,3 +40,30 @@ $padding-column: 10px
 
         &:hover
             cursor: pointer
+
+@import "./colors", "./boxes"
+
+// a white window to use to display an image
+.imageWindow
+    @extend .border-shadow
+    background-color: $light-white
+    color: $dark-gray
+
+    h3, i
+        font-size: 1.5rem
+
+    i
+        color: $dark-gray
+        position: absolute
+        right: 10px
+        top: 10px
+
+    position: fixed
+    display: none
+    padding: 10px
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    img
+        width: 100%
+        height: auto
