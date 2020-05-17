@@ -6,6 +6,7 @@ interface Image {
 type Column = Image[];
 
 interface Project {
+    id: string,
     name: string,
     githubLink?: string,
     liveLink?: string,
@@ -19,6 +20,7 @@ let md = require("markdown-it")({ html: true });
 let renderMDFile = (filename: string) => md.render(fs.readFileSync(filename, "utf-8"));
 
 let coronavision: Project = {
+    id: "2020/coronavision",
     name: "Coronavision",
     githubLink: "https://www.github.com/o-wth/Corona-Vision",
     liveLink: "https://www.coronavision.us/",
@@ -43,6 +45,7 @@ let coronavision: Project = {
 };
 
 let eyeos: Project = {
+    id: "2020/eyeos",
     name: "EyeOS",
     githubLink: "https://www.github.com/myfatemi04/EyeOS",
     html: renderMDFile("markdown/eyeos.md"),
