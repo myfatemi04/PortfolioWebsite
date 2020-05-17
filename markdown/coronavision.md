@@ -1,4 +1,4 @@
-# Welcome to Coronavision!
+# What is Coronavision?
 This app was intended to help people track the spread of the coronavirus and visualize its spread using graphs and animated heatmaps. I wrote this in 10th grade, with some help from some of my friends.
 
 # Features
@@ -18,7 +18,7 @@ The heatmaps depended more on geographic points, so I couldn't use SVG maps. To 
 ## Charts
 The charts were available for all countries and states, and graphed a 7-day moving average trendline along with the raw data. Originally, I included a logistic regression to attempt to predict the spread of the virus, and it fit the data correctly, but it became clear that the logistic predictions weren't accurate for the long-term. To prevent misinformation, I hid them from the site.
 ## News
-I used the [News API](newsapi.org) to add live news coverage of the virus.
+I used the [News API](http://www.newsapi.org) to add live news coverage of the virus.
 # How To Run
 The website frontend runs on NodeJS. To start the frontend server:
 1. Install NodeJS, if you haven't already

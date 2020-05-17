@@ -12,6 +12,7 @@ interface Project {
     liveLink?: string,
     images?: Column[],
     html?: string,
+    authors: string,
     descHtml?: string,
     videoEmbed?: string
 }
@@ -26,6 +27,7 @@ let youtubeEmbed = (id: string) => {
 let coronavision: Project = {
     id: "2020/coronavision",
     name: "Coronavision",
+    authors: "Michael Fatemi with help from Suhas Nandiraju",
     githubLink: "https://www.github.com/o-wth/Corona-Vision",
     liveLink: "https://www.coronavision.us/",
     images: [
@@ -51,6 +53,7 @@ let coronavision: Project = {
 let eyeos: Project = {
     id: "2020/eyeos",
     name: "EyeOS",
+    authors: "Michael Fatemi, Autin Mitra, and Suhas Nandiraju",
     githubLink: "https://www.github.com/myfatemi04/EyeOS",
     images: [
         [

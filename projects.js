@@ -10,6 +10,7 @@ var youtubeEmbed = function (id) {
 var coronavision = {
     id: "2020/coronavision",
     name: "Coronavision",
+    authors: "Michael Fatemi with help from Suhas Nandiraju",
     githubLink: "https://www.github.com/o-wth/Corona-Vision",
     liveLink: "https://www.coronavision.us/",
     images: [
@@ -38,19 +39,20 @@ var coronavision = {
 var eyeos = {
     id: "2020/eyeos",
     name: "EyeOS",
+    authors: "Michael Fatemi, Autin Mitra, and Suhas Nandiraju",
     githubLink: "https://www.github.com/myfatemi04/EyeOS",
     images: [
         [
             { file: "/img/projects/2020/eyeos/Camera.png", alt: "Webcam view, showing positions of pupils" },
         ],
         [
-            { file: "/img/projects/2020/eyeos/App-MainPage.png", alt: "UI Main Page (made by Autin Mitra)" },
+            { file: "/img/projects/2020/eyeos/App-MainPage.png", alt: "UI Main Page (design by Autin Mitra)" },
         ],
         [
-            { file: "/img/projects/2020/eyeos/App-Settings.png", alt: "UI Settings (made by Autin Mitra)" },
+            { file: "/img/projects/2020/eyeos/App-Settings.png", alt: "UI Settings (design by Autin Mitra)" },
         ],
         [
-            { file: "/img/projects/2020/eyeos/App-AppLauncher.png", alt: "UI App Launcher (made by Autin Mitra)" },
+            { file: "/img/projects/2020/eyeos/App-AppLauncher.png", alt: "UI App Launcher (design by Autin Mitra)" },
         ],
     ],
     html: renderMDFile("markdown/eyeos.md"),

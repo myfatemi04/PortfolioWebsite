@@ -25,6 +25,7 @@
         </div>
 
         <div class="container bg-light white-box">
+            <span class="font-italic">Made by {{authors}}</span><br/>
             <a href="/">Go back to home</a>
             {{!-- guaranteed safe html, so we do {{{}}} --}}
             {{{ descHtml }}}
@@ -34,7 +35,9 @@
             {{#if videoEmbed}}
                 <div>
                     <h3 class="text-center">Video Demo</h3>
-                    {{{videoEmbed}}}
+                    <div class="text-center">
+                        {{{videoEmbed}}}
+                    </div>
                 </div>
             {{/if}}
 
