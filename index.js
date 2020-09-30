@@ -48,6 +48,6 @@ app.use("/python-tutorial", (req, res) => {
 });
 
 */
-var port = 5000;
+var port = process.env.PORT || 5000;
 console.log("Listening on", port);
 app.listen(port);
