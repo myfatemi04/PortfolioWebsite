@@ -12,7 +12,7 @@ var coronavision = {
     name: "Coronavision",
     authors: "Michael Fatemi with help from Suhas Nandiraju",
     githubLink: "https://www.github.com/o-wth/Corona-Vision",
-    liveLink: "https://www.coronavision.us/",
+    // liveLink: "https://www.coronavision.us/",
     images: [
         [
             { file: "/img/projects/2020/coronavision/MainPage-Stats.png", alt: "Live stats" },
@@ -42,18 +42,10 @@ var eyeos = {
     authors: "Michael Fatemi, Autin Mitra, and Suhas Nandiraju",
     githubLink: "https://www.github.com/myfatemi04/EyeOS",
     images: [
-        [
-            { file: "/img/projects/2020/eyeos/Camera.png", alt: "Webcam view, showing positions of pupils" },
-        ],
-        [
-            { file: "/img/projects/2020/eyeos/App-MainPage.png", alt: "UI Main Page (design by Autin Mitra)" },
-        ],
-        [
-            { file: "/img/projects/2020/eyeos/App-Settings.png", alt: "UI Settings (design by Autin Mitra)" },
-        ],
-        [
-            { file: "/img/projects/2020/eyeos/App-AppLauncher.png", alt: "UI App Launcher (design by Autin Mitra)" },
-        ],
+        [{ file: "/img/projects/2020/eyeos/Camera.png", alt: "Webcam view, showing positions of pupils" },],
+        [{ file: "/img/projects/2020/eyeos/App-MainPage.png", alt: "UI Main Page (UI by Autin Mitra)" },],
+        [{ file: "/img/projects/2020/eyeos/App-Settings.png", alt: "UI Settings (UI by Autin Mitra)" },],
+        [{ file: "/img/projects/2020/eyeos/App-AppLauncher.png", alt: "UI App Launcher (UI by Autin Mitra)" },],
     ],
     html: renderMDFile("markdown/eyeos.md"),
     descHtml: renderMDFile("markdown/eyeos-desc.md"),

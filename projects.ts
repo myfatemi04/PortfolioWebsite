@@ -29,7 +29,7 @@ let coronavision: Project = {
     name: "Coronavision",
     authors: "Michael Fatemi with help from Suhas Nandiraju",
     githubLink: "https://www.github.com/o-wth/Corona-Vision",
-    liveLink: "https://www.coronavision.us/",
+    // liveLink: "https://www.coronavision.us/",
     images: [
         [
             { file: "/img/projects/2020/coronavision/MainPage-Stats.png", alt: "Live stats"},

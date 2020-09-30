@@ -4,6 +4,7 @@ var Express = require("express");
 var hbs = require("hbs");
 var fs = require("fs");
 var projects = require("./projects");
+// import tutorials from "./tutorials";
 var app = Express();
 // We are using Handlebars
 app.set('view engine', 'hbs');
@@ -34,6 +35,19 @@ app.use("/projects", function (req, res) {
         res.render("project", projectInfo);
     }
 });
+/*
+
+app.use("/python-tutorial", (req, res) => {
+    let tutorialID = req.path.slice(1);
+    if (!tutorialID) {
+        res.render("python-tutorial");
+    } else {
+        let tutorialInfo = tutorials[tutorialID];
+        res.render("tutorial", tutorialInfo);
+    }
+});
+
+*/
 var port = 5000;
 console.log("Listening on", port);
 app.listen(port);

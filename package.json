@@ -4,8 +4,8 @@
   "description": "Website containing all of my projects",
   "main": "index.js",
   "scripts": {
-    "test": "tsc & sass static/css & node ./index.js",
-    "start": "tsc & sass static/css & node ./index.js"
+    "rundev": "tsc & sass static/css & node ./index.js",
+    "start": "node ./index.js"
   },
   "keywords": [
     "nodejs"
