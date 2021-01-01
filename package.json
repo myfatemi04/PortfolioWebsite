@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Website about me!",
   "main": "dist/index.js",
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6"
+  },
   "scripts": {
     "dev": "concurrently \"tsc -w\" \"sass --watch static/css\" \"nodemon dist/index.js\"",
     "start": "node dist/index.js",
