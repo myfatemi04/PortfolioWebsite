@@ -58,7 +58,7 @@ let youtubeEmbed = (id: string) => {
 };
 
 let coronavision: Project = {
-  id: "2020/coronavision",
+  id: "2020-coronavision",
   name: "Coronavision",
   blurb: "Website with detailed insights about the spread of the coronavirus",
   features: [
@@ -121,7 +121,7 @@ let coronavision: Project = {
 };
 
 let eyeos: Project = {
-  id: "2020/eyeos",
+  id: "2020-eyeos",
   name: "EyeOS",
   blurb: "Eye tracking to help the disabled access technology",
   features: ["Control the mouse pointer with eye tracking", "Voice commands"],
@@ -159,8 +159,8 @@ let eyeos: Project = {
 };
 
 let projects: { [key: string]: Project } = {
-  "2020/coronavision": coronavision,
-  "2020/eyeos": eyeos,
+  "2020-coronavision": coronavision,
+  "2020-eyeos": eyeos,
 };
 
 let projectYears: { [key: string]: Project[] } = {};

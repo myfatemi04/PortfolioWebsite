@@ -11,9 +11,12 @@
 	<link rel="stylesheet" href="/css/questions.css">
 
 	{{> nav}}
-	<div style="max-width: 800px" class="mx-auto">
+	<div style="max-width: 60em" class="mx-auto">
 		<div class="text-center">
 			<h1 class="display-1">Michael Fatemi</h1>
+
+			<img class="profile-image" src="/img/me.JPG">
+			<br />
 
 			<div class="question-group">
 				<div class="row question-pair">
@@ -29,24 +32,31 @@
 		</div>
 
 		{{!-- Buttons --}}
-		<div class="buttons med-font">
+		<div class="buttons h3">
 
 			<a href="#">Resumé</a>
 
-			<a href="/contact">Contact Me</a>
+			<a href="#contact">Contact Me</a>
 
 			<a target="_blank" rel="noreferrer" href="https://www.github.com/myfatemi04">
 				<i class="fa fa-github"></i>
 				GitHub
 			</a>
 
+			<a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/michael-fatemi-a38bb61a5/">
+				<i class="fab fa-linkedin"></i>
+				LinkedIn
+			</a>
+
 		</div>
 
-		<h1 class="text-center display-3">Projects</h1>
+		<h1 class="text-center display-3 mt-6" id="projects">Projects</h1>
 		{{> project-list}}
 
-		<h1 class="text-center display-3">Skills</h1>
-		{{> skills}}
+		<h1 class="text-center display-3 mt-6" id="skills">Skills</h1>
+		<div style="max-width: 30em" class="mx-auto">
+			{{> skills}}
+		</div>
 	</div>
 	{{> footer}}
 </body>

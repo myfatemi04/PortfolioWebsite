@@ -1,5 +1,9 @@
 .project-list-item {
-  margin: 2.5em 0em;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0rem;
+}
+.project-list-item img {
+  padding: 1rem;
 }
 .project-list-item .project-title {
   font-weight: bold;

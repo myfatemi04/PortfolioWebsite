@@ -20,6 +20,11 @@ a.nav-link {
   text-decoration: none;
 }
 
+.profile-image {
+  max-width: 20em;
+  border-radius: 2em;
+}
+
 .code-icons {
   display: flex;
   align-items: center;

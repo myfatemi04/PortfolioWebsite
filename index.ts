@@ -27,22 +27,8 @@ app.get("/", (req, res) => {
   res.render("index", { projects: projects.all(), skills });
 });
 
-// Saves typing
-function route(files: string[]) {
-  files.forEach((file) => {
-    app.get("/" + file, (req, res) => res.render(file));
-  });
-}
-route(["contact"]);
-
-app.use("/projects", (req, res) => {
-  let projectID = req.path.slice(1); //.slice(1) to get rid of the slash
-  if (!projectID) {
-    res.render("projects", { projects: projects.all });
-  } else {
-    let projectInfo = projects.get(projectID);
-    res.render("project", projectInfo);
-  }
+app.use("/project/:projectID", (req, res) => {
+  res.render("project", projects.get(req.params.projectID));
 });
 
 let port = process.env.PORT || 5000;
