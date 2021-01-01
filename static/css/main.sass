@@ -3,8 +3,11 @@
 body
     // setting basic colors
     background-color: $background
-    color: $foreground !important
+    color: $light-white !important
     font-family: "Roboto", sans-serif !important
+
+h1
+    color: $foreground
 
 // overriding bootstrap links
 a
@@ -16,30 +19,17 @@ a
         color: $link
         text-decoration: none
 
-// makes text darker when on a light background
-.bg-light
-    background-color: $foreground
-
 .code-icons
     // display them in a row, extend to max width
     display: flex
-    justify-content: center
-
-    // visual separation
-    border-top: 1px solid $lighter-2
-
-    padding: 10px
-
+    align-items: center
     *
-        margin: 0 10px
-
-        // code icons should be larger
-        font-size: 2rem
-
-        // color change on hover
+        margin: 10px
         color: $light-white
+        i // code icons should be larger
+            font-size: 2rem
         &:hover
-            color: $white
+            color: $light-white // override link color
 
 // removes bullets from a <ul> tag
 .no-bullets

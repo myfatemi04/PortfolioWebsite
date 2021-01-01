@@ -1,0 +1,17 @@
+.monospace, .question-group {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.question-group {
+  font-size: 2rem;
+}
+.question-group .question-pair :nth-child(1) {
+  color: #c3e874;
+  text-align: right;
+}
+.question-group .question-pair :nth-child(2) {
+  color: #ffcb6b;
+  text-align: left;
+}
+
+/*# sourceMappingURL=questions.css.map */

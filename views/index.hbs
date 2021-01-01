@@ -1,23 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Hello!</title>
-        
-        {{> css}}
-    </head>
-    <body>
-        {{> nav}}
-        <h1 class="text-center display-1">Welcome to my website!</h1>
-        <div class="buttons med-font">
-            <a href="#">Resumé</a>
-            <a href="/contact">Contact Me</a>
-            <a target="_blank" href="https://www.github.com/myfatemi04">
-                <i class="fa fa-github"></i>
-                My GitHub
-            </a>
-        </div>
-        <h1 class="text-center">My projects</h1>
-        {{> project-list}}
-        {{> footer}}
-    </body>
+
+<head>
+	<title>Michael Fatemi</title>
+
+	{{> css}}
+</head>
+
+<body>
+	<link rel="stylesheet" href="/css/questions.css">
+
+	{{> nav}}
+	<div style="max-width: 800px" class="mx-auto">
+		<div class="text-center">
+			<h1 class="display-1">Michael Fatemi</h1>
+
+			<div class="question-group">
+				<div class="row question-pair">
+					<div class="col-6">WHO AM I?</div>
+					<div class="col-6">A junior at TJHSST.</div>
+				</div>
+
+				<div class="row question-pair">
+					<div class="col-6">WHAT EXCITES ME?</div>
+					<div class="col-6">Making the future a reality.</div>
+				</div>
+			</div>
+		</div>
+
+		{{!-- Buttons --}}
+		<div class="buttons med-font">
+
+			<a href="#">Resumé</a>
+
+			<a href="/contact">Contact Me</a>
+
+			<a target="_blank" rel="noreferrer" href="https://www.github.com/myfatemi04">
+				<i class="fa fa-github"></i>
+				GitHub
+			</a>
+
+		</div>
+
+		<h1 class="text-center display-3">Projects</h1>
+		{{> project-list}}
+	</div>
+	{{> footer}}
+</body>
+
 </html>

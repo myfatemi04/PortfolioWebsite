@@ -1,22 +1,54 @@
-<div class="project-grid-container container">
-    {{#projects}}
-        <div class="project-grid-square">
-            <h2><a href="/projects/{{id}}">{{name}}</a></h2>
-            <span class="font-italic">Made by {{authors}}</span><br/>
-            <a href="/projects/{{id}}">More details</a>
-            {{{descHtml}}}
-            <div class="code-icons">
-                {{#if githubLink}}
-                    <a target="_blank" href="{{githubLink}}">
-                        <i class="fa fa-github"></i>Github
-                    </a>
-                {{/if}}
-                {{#if liveLink}}
-                    <a target="_blank" href="{{liveLink}}">
-                        <i class="fas fa-eye"></i>Live
-                    </a>
-                {{/if}}
-            </div>
-        </div>
-    {{/projects}}
+{{#projects}}
+<div class="project-list-item">
+	<div class="row">
+		{{!-- Thumbnail --}}
+		<div class="col-md-4">
+			<div style="width: 100%; height: 200px; overflow: hidden; text-align: center;">
+				<img src="{{thumbnail}}" alt="{{name}}" style="max-width: 100%;">
+			</div>
+		</div>
+
+		{{!-- Description --}}
+		<div class="col-md-8">
+			<div class="mx-2">
+				<a href="/projects/{{id}}" class="project-title">
+					{{name}}
+				</a>
+				<br />
+				<span class="project-blurb">{{ blurb }}</span>
+				<br />
+				{{#if features}}
+				<b>Features</b>
+				<ul>
+					{{#each features}}
+					<li>{{ this }}</li>
+					{{/each}}
+				</ul>
+				{{/if}}
+
+				Languages:
+				<code>
+					{{#each languages}}
+						<b>{{ this }}</b>
+					{{/each}}
+				</code>
+				<br />
+
+				<a href="/projects/{{id}}">See more</a>
+
+				{{#if githubLink}}
+				<a target="_blank" href="{{githubLink}}">
+					View on Github
+				</a>
+				{{/if}}
+
+				{{#if liveLink}}
+				<a target="_blank" href="{{liveLink}}">
+					<i class="fas fa-eye"></i>Live
+				</a>
+				{{/if}}
+			</div>
+		</div>
+	</div>
 </div>
+{{/projects}}

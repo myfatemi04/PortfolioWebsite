@@ -34,34 +34,12 @@
   cursor: pointer;
 }
 
-.drop-shadow, .border-shadow, .imageWindow, .white-box, .button, .buttons a {
+.drop-shadow, .border-shadow, .imageWindow, .white-box {
   box-shadow: 0.1cm 0.1cm rgba(0, 0, 0, 0.2);
 }
 
-.curved-border, .border-shadow, .imageWindow, .white-box, .button, .buttons a {
+.curved-border, .border-shadow, .imageWindow, .white-box {
   border-radius: 0.25rem;
-}
-
-.button, .buttons a {
-  padding: 0.5rem;
-  text-decoration: none;
-  background-color: #f7f7f7;
-  color: #2667ff;
-}
-.button:hover, .buttons a:hover {
-  text-decoration: none;
-  background-color: white;
-}
-
-.buttons {
-  display: flex;
-  flex-direction: row;
-  margin: 0.5cm auto;
-  justify-content: center;
-}
-.buttons a {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
 }
 
 .white-box {

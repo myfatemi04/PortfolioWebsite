@@ -2,7 +2,6 @@ import * as Express from "express";
 import * as hbs from "hbs";
 import * as fs from "fs";
 import * as projects from "./projects";
-// import tutorials from "./tutorials";
 
 const app = Express();
 
@@ -41,20 +40,6 @@ app.use("/projects", (req, res) => {
         res.render("project", projectInfo);
     }
 });
-
-/*
-
-app.use("/python-tutorial", (req, res) => {
-    let tutorialID = req.path.slice(1);
-    if (!tutorialID) {
-        res.render("python-tutorial");
-    } else {
-        let tutorialInfo = tutorials[tutorialID];
-        res.render("tutorial", tutorialInfo);
-    }
-});
-
-*/
 
 let port = process.env.PORT || 5000;
 console.log("Listening on", port);

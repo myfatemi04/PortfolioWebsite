@@ -1,0 +1,16 @@
+@import "colors"
+@import "font"
+
+.question-group
+	@extend .monospace
+
+	font-size: 2rem
+
+	.question-pair
+		:nth-child(1) // question
+			color: $code-green
+			text-align: right
+
+		:nth-child(2) // answer
+			color: $code-orange
+			text-align: left

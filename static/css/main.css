@@ -1,38 +1,38 @@
 body {
-  background-color: #2667ff;
+  background-color: #222222;
   color: #f7f7f7 !important;
   font-family: "Roboto", sans-serif !important;
 }
 
+h1 {
+  color: #46a2ff;
+}
+
 a {
-  color: #2667ff;
+  color: #46a2ff;
   text-decoration: underline;
 }
 a:hover {
-  color: #2667ff;
+  color: #46a2ff;
 }
 a.nav-link {
-  color: #2667ff;
+  color: #46a2ff;
   text-decoration: none;
-}
-
-.bg-light {
-  background-color: #f7f7f7;
 }
 
 .code-icons {
   display: flex;
-  justify-content: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 10px;
+  align-items: center;
 }
 .code-icons * {
-  margin: 0 10px;
-  font-size: 2rem;
+  margin: 10px;
   color: #f7f7f7;
 }
+.code-icons * i {
+  font-size: 2rem;
+}
 .code-icons *:hover {
-  color: #ffffff;
+  color: #f7f7f7;
 }
 
 .no-bullets {

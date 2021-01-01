@@ -1,27 +1,26 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "Website containing all of my projects",
-  "main": "index.js",
+  "description": "Website about me!",
+  "main": "dist/index.js",
   "scripts": {
-    "rundev": "tsc & sass static/css & node ./index.js",
-    "start": "node ./index.js"
+    "dev": "concurrently \"tsc -w\" \"sass --watch static/css\" \"nodemon dist/index.js\"",
+    "start": "node dist/index.js"
   },
-  "keywords": [
-    "nodejs"
-  ],
+  "keywords": [],
   "author": "Michael Fatemi",
   "license": "ISC",
   "dependencies": {
     "@types/express": "^4.17.6",
     "@types/hbs": "^4.0.1",
-    "countryjs": "^1.8.0",
     "express": "^4.17.1",
     "hbs": "^4.1.1",
     "markdown-it": "^10.0.0",
     "mysql": "^2.18.1",
-    "newsapi": "^2.4.0",
-    "sqlstring": "^2.3.2",
     "typescript": "^3.9.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.6"
   }
 }

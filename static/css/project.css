@@ -1,0 +1,17 @@
+.project-list-item {
+  margin: 2.5em 0em;
+}
+.project-list-item .project-title {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #46a2ff;
+}
+.project-list-item .project-blurb {
+  font-style: italic;
+  font-weight: lighter;
+  vertical-align: middle;
+  line-height: 2rem;
+}
+
+/*# sourceMappingURL=project.css.map */

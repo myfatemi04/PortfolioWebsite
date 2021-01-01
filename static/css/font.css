@@ -1,9 +1,5 @@
-.large-font {
-  font-size: 3rem;
-}
-
-.med-font {
-  font-size: 2rem;
+.monospace {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 /*# sourceMappingURL=font.css.map */

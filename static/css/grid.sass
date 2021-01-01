@@ -3,47 +3,6 @@
 $grid-width: 300px
 $grid-height: 300px
 
-// grid wrapping is based off of Fireship.io
-.project-grid-container
-    display: grid
-
-    // center the squares in the grid
-    text-align: center
-
-    // gap between squares
-    gap: 1rem
-
-    // automatically make columns fit to the browser
-    grid-template-columns: repeat(auto-fit, minmax($grid-width, 1fr))
-
-    // size of implicitly generated rows
-    grid-auto-rows: $grid-height
-
-.project-grid-square
-    @extend .drop-shadow, .curved-border
-
-    // reset the centering from .project-grid-container
-    text-align: left
-    background-color: $lighter-1
-
-    // pad the content
-    padding: 0.5rem
-
-    // scrollable
-    overflow-y: auto
-
-    // make it lighter on hover
-    &:hover
-        background-color: $lighter-2
-    
-    img
-        object-fit: contain
-        width: 100%
-        height: auto
-
-    a
-        color: $light-white
-
 // grid with an icon and text
 .text-grid
     text-align: left
@@ -59,8 +18,7 @@ $grid-height: 300px
         // spacing between
         i, span
             margin: 0px 10px
-        
+
         i
             color: $dark-gray
-
-        margin: 10px
+            margin: 10px
