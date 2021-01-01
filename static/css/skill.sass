@@ -1,0 +1,23 @@
+@import "font"
+@import "colors"
+
+.skill
+	padding: 2rem 0rem
+
+	border-radius: 0.5rem
+
+	&:hover
+		background-color: $faded-dark
+
+	:nth-child(1) // image
+		img
+			max-width: 100%
+
+	:nth-child(2) // skill info
+		.skill-name
+			@extend .monospace
+			color: $code-orange
+			font-weight: bold
+		.skill-level
+			@extend .monospace
+			color: $code-blue

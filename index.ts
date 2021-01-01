@@ -2,43 +2,47 @@ import * as Express from "express";
 import * as hbs from "hbs";
 import * as fs from "fs";
 import * as projects from "./projects";
+import { skills } from "./skills";
 
 const app = Express();
 
 // We are using Handlebars
-app.set('view engine', 'hbs');
-app.set('views', './views');
+app.set("view engine", "hbs");
+app.set("views", "./views");
 
 // Partials so we can reuse code
 function makePartials(names: string[]) {
-    names.forEach(
-        name => hbs.registerPartial(name, fs.readFileSync("views/" + name + ".hbs", "utf-8"))
-    );
+  names.forEach((name) =>
+    hbs.registerPartial(
+      name,
+      fs.readFileSync("views/partials/" + name + ".hbs", "utf-8")
+    )
+  );
 }
 
-makePartials(['css', 'nav', 'footer', 'project-list']);
+makePartials(["css", "nav", "footer", "project-list", "skills"]);
 
-app.use("/", Express.static('./static'));
+app.use("/", Express.static("./static"));
 app.get("/", (req, res) => {
-    res.render("index", { projects: projects.all });
+  res.render("index", { projects: projects.all(), skills });
 });
 
 // Saves typing
 function route(files: string[]) {
-    files.forEach(file => {
-        app.get("/" + file, (req, res) => res.render(file));
-    });
+  files.forEach((file) => {
+    app.get("/" + file, (req, res) => res.render(file));
+  });
 }
-route(['contact']);
+route(["contact"]);
 
 app.use("/projects", (req, res) => {
-    let projectID = req.path.slice(1); //.slice(1) to get rid of the slash
-    if (!projectID) {
-        res.render("projects", { projects: projects.all });
-    } else {
-        let projectInfo = projects.get(projectID);
-        res.render("project", projectInfo);
-    }
+  let projectID = req.path.slice(1); //.slice(1) to get rid of the slash
+  if (!projectID) {
+    res.render("projects", { projects: projects.all });
+  } else {
+    let projectInfo = projects.get(projectID);
+    res.render("project", projectInfo);
+  }
 });
 
 let port = process.env.PORT || 5000;

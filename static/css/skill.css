@@ -1,0 +1,27 @@
+.monospace, .skill :nth-child(2) .skill-level, .skill :nth-child(2) .skill-name {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.text-faded {
+  color: #676e95;
+}
+
+.skill {
+  padding: 2rem 0rem;
+  border-radius: 0.5rem;
+}
+.skill:hover {
+  background-color: #474c6a;
+}
+.skill :nth-child(1) img {
+  max-width: 100%;
+}
+.skill :nth-child(2) .skill-name {
+  color: #ffcb6b;
+  font-weight: bold;
+}
+.skill :nth-child(2) .skill-level {
+  color: #76abff;
+}
+
+/*# sourceMappingURL=skill.css.map */

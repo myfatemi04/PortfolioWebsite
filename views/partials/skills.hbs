@@ -1,0 +1,17 @@
+{{#each skills}}
+
+<link rel="stylesheet" href="/css/skill.css">
+
+<div class="row skill">
+	<div class="col-2">
+		<img src="{{imageUrl}}" alt="{{name}}">
+	</div>
+	<div class="col-10">
+		<h3 class="skill-name">{{name}}</h3>
+		<span class="skill-level">
+			{{skillLevel}}
+		</span>
+	</div>
+</div>
+
+{{/each}}

@@ -46,7 +46,6 @@ interface Project {
   liveLink?: string;
   images?: ImageGalleryColumn[];
   html?: string;
-  descHtml?: string;
   videoEmbed?: string;
 }
 
@@ -156,7 +155,6 @@ let eyeos: Project = {
     ],
   ],
   html: renderMDFile("markdown/eyeos.md"),
-  descHtml: renderMDFile("markdown/eyeos-desc.md"),
   videoEmbed: youtubeEmbed("PvBQVCoy1MQ"),
 };
 
