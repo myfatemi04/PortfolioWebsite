@@ -11,7 +11,7 @@
     "dev": "concurrently \"tsc -w\" \"sass --watch static/css\" \"nodemon dist/index.js\"",
     "start": "node dist/index.js",
     "heroku-prebuild": "",
-    "heroku-postbuild": "tsc & sass static/css"
+    "heroku-postbuild": "npx tsc & npx sass static/css"
   },
   "keywords": [],
   "author": "Michael Fatemi",
@@ -23,11 +23,11 @@
     "hbs": "^4.1.1",
     "markdown-it": "^10.0.0",
     "mysql": "^2.18.1",
-    "typescript": "^3.9.2"
+    "typescript": "^3.9.2",
+    "dart-sass": "^1.25.0"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
-    "dart-sass": "^1.25.0",
     "nodemon": "^2.0.6"
   }
 }
